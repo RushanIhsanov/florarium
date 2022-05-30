@@ -1,2 +1,2 @@
 # florarium
-https://github.com/RushanIhsanov/florarium.git
+https://rushanihsanov.github.io/florarium/
