@@ -53,10 +53,6 @@ p {
     margin: 0 auto;
 }
 
-.hero {
-}
-.section {
-}
 .header {
     padding-top: 18px;
 }
@@ -76,18 +72,13 @@ p {
     object-fit: contain;
     margin-right: 15px;
 }
-.logo__text {
-}
 
 .logo__title {
     font-weight: 700;
     font-size: 18px;
     line-height: 131.19%;
 }
-.logo__subtitle {
-}
-.nav {
-}
+
 .nav__list {
     display: flex;
 }
@@ -149,12 +140,6 @@ p {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
-}
-
-.basket__count {
-}
-
-.basket__currency {
 }
 
 .basket__btn {
@@ -228,7 +213,50 @@ p {
     }
 }
 
-/* --------------------Hero__Main-------------------- */
+@media (max-width: 320px) {
+    .header {
+        position: relative;
+    }
+
+    .header__container {
+        flex-wrap: wrap;
+    }
+
+    .header__burger {
+        position: absolute;
+        top: 35px;
+        right: 0;
+        width: 35px;
+        height: 24px;
+        z-index: 30;
+        margin-right: 15px;
+    }
+
+    .header__burger::before,
+    .header__burger::after {
+        width: 32px;
+        height: 4px;
+    }
+
+    .header__burger-el {
+        height: 4px;
+        width: 35px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .basket__img-wrapp {
+        width: 42px;
+        height: 42px;
+    }
+
+    .basket__price {
+        font-size: 12px;
+        font-weight: bold;
+    }
+}
+
+/* -------------------------------------------------------------Hero__Main------------------------------------------------------------------ */
 
 .hero__main {
     padding-top: 24px;
@@ -348,7 +376,37 @@ p {
     }
 }
 
-/* ---------------------product-------------------- */
+@media (max-width: 320px) {
+    .title {
+        font-size: 24px;
+    }
+
+    .subtitle {
+        font-size: 13px;
+    }
+
+    .hero__desk::before {
+        right: 1%;
+    }
+
+    .hero__content {
+        width: 100%;
+        padding-left: 0%;
+    }
+
+    .hero__slider {
+        margin-left: 1%;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 12px 50px;
+        align-items: flex-start;
+        margin-top: 28px;
+    }
+}
+
+/* --------------------------------------------------------product-------------------------------------------------------------- */
 
 .product {
     padding: 42px 20px 68px;
@@ -587,6 +645,106 @@ p {
     }
 }
 
+/* -----------------------------------------GALLERY---------------------------------- */
+
+.gallery__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 131.19%;
+
+    margin-top: 56px;
+    margin-bottom: 46px;
+}
+
+.gallery__items {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(12, 70px);
+    grid-template-rows: repeat(3, 210px);
+
+    column-gap: 30px;
+    row-gap: 37px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    margin-bottom: 74px;
+}
+
+.gallery__item {
+    position: relative;
+}
+
+.item-big {
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+.gallery__item-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery__item-descr {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    background: #ffbf42;
+    padding: 16px 23px 12px 50px;
+    border-top-left-radius: 50px;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 131.19%;
+}
+.item-s {
+    grid-column: span 3;
+    grid-row: span 1;
+}
+
+.item-xl {
+    grid-column: span 6;
+    grid-row: span 1;
+}
+
+.item-l {
+    grid-column: span 5;
+}
+
+.item-m {
+    grid-column: span 4;
+}
+
+@media (max-width: 768px) {
+    .gallery__items {
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+}
+
+@media (max-width: 320px) {
+    .gallery__items {
+        grid-template-columns: repeat(12, 45px);
+        grid-template-rows: repeat(3, 130px);
+
+        column-gap: 19px;
+        row-gap: 23px;
+
+        padding-bottom: 20px;
+        margin-bottom: 54px;
+    }
+
+    .gallery__item-descr {
+        padding: 10px 14px 7px 35px;
+        border-top-left-radius: 50px;
+
+        font-size: 12px;
+    }
+}
+
 /* ------------------------------------------------reviews---------------------------------- */
 
 .reviews {
@@ -599,6 +757,19 @@ p {
     overflow-x: auto;
     overflow-y: hidden;
 }
+
+.reviews__user {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 131.19%;
+}
+.reviews__professional {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 131.19%;
+    color: #c4c4c4;
+}
+
 .reviews__item {
     background: #ffffff;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.16);
